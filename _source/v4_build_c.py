@@ -7,7 +7,7 @@ def build_today(wb):
           align=A("left", "center", False, 1), border=None)
     ws.row_dimensions[1].height = 46
     merge(ws, "A2:J2",
-          "从下拉选择最多 5 个想练的角色；当该角色在总表 AO 列标记「已练好」或自动判定为已练好，本格会自动移除；每格下方给出毕业面板与推荐方案。",
+          "从下拉选择最多 5 个想练的角色；当该角色在总表 AO 列标记「已练好」或自动判定为已练好，详细规划会自动隐藏；每格下方给出毕业面板与推荐方案。",
           font=F(9, False, MUTED), fill_color="F8FAFC", align=A("left", "center", False, 1), border=None)
     ws.row_dimensions[2].height = 24
 
@@ -110,7 +110,7 @@ def build_today(wb):
                                                             fill=fill("EAF2F8"), font=F(10, True, "21618C")))
 
     merge(ws, "A40:J40",
-          "说明：这里不再自动排名，由你自己选 5 个想练的角色；角色一旦标记「已练好」（或总表判定为已练好），该格自动清空并从清单移除。",
+          "说明：这里不再自动排名，由你自己选 5 个想练的角色；角色一旦标记「已练好」（或总表判定为已练好），详细规划自动隐藏，角色选择保留，可手动更换。",
           font=F(9, False, MUTED), fill_color="F8FAFC", align=A("left", "center", False, 1), border=None)
     merge(ws, "A41:J41",
           "未拥有角色会提示无法规划；毕业面板取自 WIKI 攻略页，推荐方案取自配装数据库；备注可直接跳转米游社攻略搜索。",

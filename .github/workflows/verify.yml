@@ -8,7 +8,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r requirements.txt
+      - name: Install dependencies for test and launcher interpreters
+        run: |
+          python -m pip install -r requirements.txt
+          py -3 -m pip install -r requirements.txt
       - run: python -m compileall -q _source _wiki_tmp/parse_builds.py
       - run: python -m unittest discover -s tests -v
       - name: Missing Cookie launcher
