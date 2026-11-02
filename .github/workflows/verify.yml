@@ -29,3 +29,13 @@ jobs:
         run: |
           chcp 65001 >nul
           echo. | call 更新数据.bat --offline
+      - name: Missing Python launcher
+        shell: cmd
+        run: |
+          chcp 65001 >nul
+          set "PATH=%SystemRoot%\System32"
+          echo. | call 检查米游社Cookie.bat > no-python.txt 2>&1
+          set "CHECK_EXIT=%ERRORLEVEL%"
+          type no-python.txt
+          if "%CHECK_EXIT%"=="0" exit /b 1
+          findstr /C:"Python" no-python.txt >nul
