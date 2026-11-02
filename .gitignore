@@ -1,0 +1,17 @@
+CODEX_TASKS.md
+米游社cookie*.txt
+*miyoushe_cookie*
+原神角色养成管理表_我的数据_*.xlsx
+旧版本/
+预览图/
+_wiki_tmp/*
+!_wiki_tmp/parse_builds.py
+~$*.xlsx
+.dsh-office-preview/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.codegraph/
+.cursor/
+*.zip
