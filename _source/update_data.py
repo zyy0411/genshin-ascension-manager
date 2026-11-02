@@ -22,6 +22,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(BASE, "_source")
 TMP = os.path.join(BASE, "_wiki_tmp")
 PY = sys.executable
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 
 from import_miyoushe import recalc
 

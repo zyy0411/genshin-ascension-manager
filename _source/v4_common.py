@@ -11,6 +11,9 @@ import re
 import sys
 from datetime import date
 
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+
 from openpyxl import Workbook
 from openpyxl.styles import Protection, Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter

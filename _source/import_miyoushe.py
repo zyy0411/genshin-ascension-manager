@@ -801,5 +801,6 @@ def main():
 
 
 if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
     result = main()
     sys.exit(result if isinstance(result, int) else 0)
